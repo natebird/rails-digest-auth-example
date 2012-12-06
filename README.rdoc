@@ -1,0 +1,10 @@
+== An example Rails API application using and testing digest authentication.
+
+The main files to look at include:
+1. app/controllers/application_controller.rb - before_filter to call authenticate on every action.
+2. app/controllers/auth_controller.rb - contains empty digest_auth action and the authenticate method.
+3. config/routes.rb - the digest_auth route
+4. config/initializers/core_extensions.rb - load some ruby core extenstions
+5. lib/core_ext/* - the handy ruby core extenstions
+6. /test/test_helper.rb - has the 'setup_digest_auth' and 'authenticate_with_http_digest' methods.
+7. /test/functional/auth_controller_test.rb - The simple authorization test in test/unit.
